@@ -1,0 +1,247 @@
+/* Logo di Navbar */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Logo di Hero Section */
+.hero-logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+/* General Styling */
+body {
+  font-family: "Verdana", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e8f5e9; /* Warna hijau muda yang lembut */
+  color: #2e7d32; /* Warna hijau gelap */
+  text-align: center;
+}
+
+header {
+  background-color: #004d40; /* Warna hijau hutan gelap */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 5s;
+}
+
+nav ul li a:hover {
+  background-color: #00796b;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+
+  height: 100vh;
+  background: #004d40;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 77, 64, 0.5); /* Warna overlay hijau */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-shadow: 2px 2px #000;
+}
+
+.overlay p {
+  font-size: 22px;
+  text-shadow: 2px 2px #000;
+  margin-top: 10px;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  background-color: #f1f8e9;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.service,
+.portfolio-item {
+  background-color: #a5d6a7;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.portfolio-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-height: 360px;
+}
+
+.portfolio-item {
+  flex: 1;
+  margin: 10px;
+  max-width: 300px; /* Atur sesuai kebutuhan */
+
+  position: relative;
+  text-align: center; /* Rata tengah teks */
+}
+
+.portfolio-slideshow-container {
+  position: relative;
+  max-width: 100%; /* Mengatur agar tidak melampaui lebar kontainer */
+  overflow: hidden;
+}
+
+.portfolio-slide {
+  display: none; /* Sembunyikan slide secara default */
+}
+
+.portfolio-slide img {
+  width: 100%; /* Mengatur lebar gambar agar responsif */
+  /* Mengatur tinggi otomatis sesuai aspek rasio */
+  max-height: 200px; /* Mengatur tinggi maksimum */
+}
+
+.fade {
+  animation: fade 1.5s ease-in-out; /* Efek transisi */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.service:hover,
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #2e7d32;
+  border-radius: 4px;
+  background-color: #e8f5e9;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00796b;
+}
+
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.portfolio-slide {
+  display: none; /* Default untuk sembunyikan semua slide */
+}
+
+.portfolio-slideshow-container {
+  position: relative;
+  max-width: 100%; /* Atur lebar maksimum sesuai kebutuhan */
+  margin: auto; /* Center slideshow */
+}
+
+.fade {
+  animation: fade 1s ease-in-out;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.map-container {
+  text-align: center; /* Center the map */
+}
+
+iframe {
+  max-width: 100%; /* Responsive iframe */
+  height: auto;
+}
