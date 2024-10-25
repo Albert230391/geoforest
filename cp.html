@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conservation Partnership</title>
+    <style>
+      /* General Styling */
+      body {
+        font-family: "Verdana", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #e8f5e9; /* Warna hijau muda yang lembut */
+        color: #2e7d32; /* Warna hijau gelap */
+        text-align: center;
+      }
+
+      header {
+        background-color: #004d40; /* Warna hijau hutan gelap */
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+
+      header .logo {
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background 0.3s;
+      }
+
+      nav ul li a:hover {
+        background-color: #00796b;
+        border-radius: 4px;
+      }
+
+      .hero {
+        position: relative;
+        height: 400px;
+        background: #004d40;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden; /* Hide overflow */
+      }
+
+      .hero img {
+        position: absolute; /* Position image absolutely */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cover the hero section */
+        opacity: 0; /* Start hidden */
+        transition: opacity 1s ease-in; /* Transition effect */
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        text-shadow: 2px 2px #000;
+        position: relative; /* Position relative for layering */
+        z-index: 1; /* Ensure the text is above the image */
+      }
+
+      /* Fade in the image */
+      .hero img.loaded {
+        opacity: 1; /* Fade in the image */
+      }
+
+      section {
+        padding: 40px 20px;
+        background-color: #f1f8e9;
+      }
+
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #2e7d32;
+      }
+
+      .news {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .news-item {
+        background-color: #a5d6a7;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 800px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .news-item:hover {
+        transform: scale(1.02);
+      }
+
+      .news-item h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #2e7d32;
+      }
+
+      .news-item p {
+        font-size: 18px;
+        color: #004d40;
+      }
+
+      /* Galeri */
+      .gallery-section {
+        padding: 50px 20px;
+        background-color: #f1f8e9;
+      }
+
+      .gallery-title {
+        font-size: 36px;
+        color: #2e7d32;
+        margin-bottom: 40px;
+      }
+
+      .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .gallery-item {
+        background-color: #a5d6a7;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: calc(33.33% - 40px); /* Kotak galeri responsif */
+        max-width: 300px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .gallery-item p {
+        margin-top: 10px;
+        color: #004d40;
+        font-weight: bold;
+      }
+
+      /* Responsiveness */
+      @media only screen and (max-width: 768px) {
+        .news-item {
+          width: 95%;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        section {
+          padding: 20px 10px;
+        }
+
+        .gallery-item {
+          width: calc(50% - 20px); /* Tampilkan 2 kotak pada layar kecil */
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .gallery-item {
+          width: 100%; /* Tampilkan 1 kotak pada layar sangat kecil */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header>
+      <div class="logo">GeoForest</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Beranda</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <img
+        src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/ykan/blog/sains/rilc/_DJI_0039.jpg?crop=0%2C0%2C1368%2C752&wid=4000&hei=2200&scl=0.342"
+        alt="Hero Image"
+        class="hero-image"
+      />
+      <h1>Conservation Partnership</h1>
+    </div>
+
+    <!-- News Section -->
+    <section>
+      <h2>Conservation Partnership</h2>
+      <div class="news">
+        <!-- Berita 1 -->
+        <div class="news-item">
+          <h3>Kegiatan saat ini</h3>
+          <p>
+            Saat ini tim kami bekerja pada PT. Parakawan Abadi Indonesia yang
+            sedang melakukan kegiatan rehabilitasi Daerah Aliran Sungai dengan
+            beberapa lokasi seperti:
+          </p>
+          <ul>
+            <li>Blok RehabDAS di Halmahera Barat dengan total luas 1.078 Ha</li>
+            <li>Blok RehabDAS di Kepulauan Sula dengan total luas 445 Ha</li>
+            <li>Blok RehabDAS di Kabupaten Poso dengan total luas 390 Ha</li>
+            <p>
+              Seluruh kegiatan ini diawasi dan dipantau oleh tim dari GeoForest
+              Indonesia
+            </p>
+          </ul>
+        </div>
+
+        <!-- Berita 2 -->
+        <div class="news-item">
+          <h3>Penggunaan Teknologi Gridding System dalam kegiatan penanaman</h3>
+          <p>
+            Untuk detail yang lebih baik, kami menggunakan Gridding system pada
+            setiap lokasi penanaman dengan pembagian per 1 hektar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section class="gallery-section">
+      <h2 class="gallery-title">Galeri</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="Images/tanam.jpg" alt="Foto Restorasi 1" />
+          <p>Proyek Penanaman Pohon</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/Tanam2.jpg" alt="Foto Restorasi 2" />
+          <p>Pemulihan Area Hutan</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/Pupuk.jpg" alt="Foto Restorasi 3" />
+          <p>Pemeliharaan</p>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="Forestrestoration/Images/TimePhoto_20230810_090704.jpg"
+            alt="Foto Restorasi 4"
+          />
+          <p>Pengawasan Proyek</p>
+        </div>
+        <div class="gallery-item">
+          <img src="Images/IMG_4648.JPG" alt="Foto Restorasi 5" />
+          <p>Kerja Sama Masyarakat</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; GeoForest 2024</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const heroImage = document.querySelector(".hero-image");
+
+        // Add the loaded class after the image has fully loaded
+        heroImage.onload = () => {
+          heroImage.classList.add("loaded");
+        };
+      });
+    </script>
+  </body>
+</html>
