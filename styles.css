@@ -1,0 +1,342 @@
+/* Logo di Navbar */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Logo di Hero Section */
+.hero-logo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+/* General Styling */
+body {
+  font-family: "Verdana", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e8f5e9; /* Warna hijau muda yang lembut */
+  color: #2e7d32; /* Warna hijau gelap */
+  text-align: center;
+}
+
+header {
+  background-color: #004d40; /* Warna hijau hutan gelap */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 5s;
+}
+
+nav ul li a:hover {
+  background-color: #00796b;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: #004d40;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 77, 64, 0.5); /* Warna overlay hijau */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-shadow: 2px 2px #000;
+}
+
+.overlay p {
+  font-size: 22px;
+  text-shadow: 2px 2px #000;
+  margin-top: 10px;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  background-color: #f1f8e9;
+  margin-bottom: 60px; /* Ensure enough space below each section */
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.service {
+  background-color: #a5d6a7;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+  transition: transform 2s ease; /* Reduced transition time for responsiveness */
+}
+
+.portfolio-item {
+  background-color: #a5d6a7;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  transition: transform 2s ease; /* Reduced transition time for responsiveness */
+}
+
+.service {
+  margin-bottom: 40px; /* Adjusted margin-bottom for better separation */
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to prevent overlap */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between items */
+}
+
+.portfolio-item {
+  flex: 1 1 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  height: 350px; /* Tetapkan tinggi tetap agar seragam */
+}
+
+.portfolio-slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-slide {
+  display: none; /* Sembunyikan slide secara default */
+}
+
+/* Ukuran Gambar di Dalam Slideshow Portfolio */
+.portfolio-slide img {
+  width: 100%; /* Pastikan gambar menyesuaikan lebar kotak */
+  height: 250px; /* Tetapkan tinggi tetap untuk konsistensi */
+  object-fit: cover; /* Gambar akan dipotong dan di tengah agar pas */
+}
+
+.fade {
+  animation: fade 1.5s ease-in-out; /* Efek transisi */
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.service:hover,
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #2e7d32;
+  border-radius: 4px;
+  background-color: #e8f5e9;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00796b;
+}
+
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.portfolio-slide {
+  display: none; /* Default untuk sembunyikan semua slide */
+}
+
+.portfolio-slideshow-container {
+  position: relative;
+  max-width: 100%; /* Atur lebar maksimum sesuai kebutuhan */
+  margin: auto; /* Center slideshow */
+}
+
+.fade {
+  animation: fade 1s ease-in-out;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.map-container {
+  text-align: center; /* Center the map */
+}
+
+iframe {
+  max-width: 100%; /* Responsive iframe */
+  height: auto;
+}
+
+/* Adjustments for Small Screens */
+@media only screen and (max-width: 768px) {
+  .portfolio-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-item {
+    max-width: 90%;
+    height: auto; /* Ensure it adapts to smaller screens */
+    margin: 10px 0;
+  }
+  /* Foto dalam kotak portfolio */
+  .portfolio-slide img {
+    height: 150px; /* Reduced height for smaller screens */
+    width: 300px;
+  }
+}
+
+/* Ensure adequate spacing on mobile */
+section {
+  padding: 30px 10px;
+  margin-bottom: 80px; /* Increased margin-bottom for better separation */
+}
+
+.service {
+  margin-bottom: 60px; /* Adjusted margin-bottom for better separation */
+}
+
+/* Ensure enough space below the portfolio gallery */
+.portfolio-gallery {
+  margin-bottom: 60px; /* Ensure enough space below portfolio gallery */
+}
+
+/* Ensure "Contact Us" section gets proper spacing */
+.contact-info {
+  margin-top: 60px; /* Maintain spacing */
+}
+
+/* Styling for the burger menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Hide the normal nav menu on small screens */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #004d40;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
